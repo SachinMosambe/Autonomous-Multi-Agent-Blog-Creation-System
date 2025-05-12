@@ -1,0 +1,42 @@
+plan_task:
+  description: >
+    Prioritize the latest trends in the {topic} and plan the content for the blog post.
+    Identify the target audience and the keywords that are relevant to the topic.
+    Develop a structure for the blog post that is engaging and informative.
+    Include SEO keywords and relevant information that will help the writer to write the blog post.
+  expected_output: >
+    A comprehensive plan for the blog post with the main topics, each with a full section of information.
+    with an outline,audience,keywords,and a list of sources.
+  agent: planner
+
+
+write_task:
+  description: >
+    Use the content plan and the outline to write the blog post on the given {topic}.
+    Include the SEO keywords and relevant information that will help the audience to understand the topic better.
+    Sections/subsections should be well written and engaging.
+    Ensure the post is strctured with an engaging introduction,insightful body and a strong conclusion.
+    Proofread for grammatical errors and alignment with the brand's voice.
+  expected_output: >
+    A well-written blog post in markdown format, ready for publication,each section should have 2 or 3 paragraphs.
+  agent: writer
+
+
+edit_task:
+  description: >
+    Proofread the blog post for any grammatical errors or inconsistencies.
+    Ensure the post is aligned with the brand's voice and style.
+    Make sure the post is engaging and informative.
+  expected_output: >
+    A well-written blog post in markdown format, ready for publication,each section should have 2 or 3 paragraphs.
+  agent: editor
+
+
+review_task:
+  description: >
+    Review the blog post for any errors or inconsistencies.
+    Ensure the post is aligned with the brand's voice and style.
+    Make sure the post is engaging and informative.
+  expected_output: >
+    A well-written blog post in markdown format, ready for publication,each section should have 2 or 3 paragraphs.
+  agent: reviewer   

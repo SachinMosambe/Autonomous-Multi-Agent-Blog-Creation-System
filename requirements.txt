@@ -1,0 +1,7 @@
+crewai
+openai
+gradio
+pydantic
+langchain
+langchain-openai
+pysbd
