@@ -1,12 +1,23 @@
 plan_task:
   description: >
-    Prioritize the latest trends in the {topic} and plan the content for the blog post.
+    Use the search tools available to you to research the latest trends in the {topic}.
+    Prioritize the latest research, data, and trends in the {topic} and plan the content for the blog post.
+    Search for recent developments, news, and expert opinions about {topic}.
     Identify the target audience and the keywords that are relevant to the topic.
     Develop a structure for the blog post that is engaging and informative.
     Include SEO keywords and relevant information that will help the writer to write the blog post.
+    Make sure to cite your sources of information from your web searches.
   expected_output: >
-    A comprehensive plan for the blog post with the main topics, each with a full section of information.
-    with an outline,audience,keywords,and a list of sources.
+    A comprehensive content plan with the following components:
+    1. EXECUTIVE SUMMARY: Brief overview of the topic and key points (2-3 sentences)
+    2. TARGET AUDIENCE: Detailed description of who this blog targets and why they would find it valuable
+    3. SEO KEYWORDS: List of 10-15 primary and secondary keywords with search volume estimates where possible
+    4. DETAILED OUTLINE: Full structure with H1, H2, and H3 headings - at least 5 major sections
+    5. KEY POINTS FOR EACH SECTION: 3-5 bullet points of facts/data/insights for each major section
+    6. SOURCES: At least 5 credible sources with URLs and brief descriptions of key information from each
+    7. CONTENT ANGLE: Unique perspective or hook that differentiates this blog from others
+    8. RECOMMENDED VISUALS: Suggestions for charts, images, or infographics to enhance the content
+    Ensure all information is up-to-date as of your search results.
   agent: planner
 
 
@@ -15,10 +26,19 @@ write_task:
     Use the content plan and the outline to write the blog post on the given {topic}.
     Include the SEO keywords and relevant information that will help the audience to understand the topic better.
     Sections/subsections should be well written and engaging.
-    Ensure the post is strctured with an engaging introduction,insightful body and a strong conclusion.
+    Ensure the post is structured with an engaging introduction, insightful body and a strong conclusion.
     Proofread for grammatical errors and alignment with the brand's voice.
   expected_output: >
-    A well-written blog post in markdown format, ready for publication,each section should have 2 or 3 paragraphs.
+    A complete first draft blog post with:
+    1. Compelling headline with SEO keywords naturally incorporated
+    2. Engaging introduction with a hook that draws readers in (1-2 paragraphs)
+    3. Well-structured body with proper H2 and H3 headings from the outline
+    4. Each section containing 2-3 well-developed paragraphs with facts, examples, and insights
+    5. Natural integration of all primary keywords throughout the text
+    6. Compelling conclusion with a clear call-to-action
+    7. Properly formatted in Markdown with bold text for emphasis and bullet points where appropriate
+    8. Between 1,500-2,000 words total
+    The draft should be publication-ready with proper grammar, spelling, and punctuation.
   agent: writer
 
 
@@ -27,16 +47,43 @@ edit_task:
     Proofread the blog post for any grammatical errors or inconsistencies.
     Ensure the post is aligned with the brand's voice and style.
     Make sure the post is engaging and informative.
+    Improve the structure, flow, and readability of the content.
+    Enhance SEO optimization without keyword stuffing.
+    Verify all facts and claims for accuracy.
   expected_output: >
-    A well-written blog post in markdown format, ready for publication,each section should have 2 or 3 paragraphs.
+    An enhanced and polished blog post with:
+    1. All grammatical and spelling errors corrected
+    2. Improved sentence structure and paragraph transitions
+    3. Enhanced headline and subheadings for clarity and SEO impact
+    4. Restructured content where needed for better flow and reader engagement
+    5. Strengthened introduction and conclusion
+    6. Refined language to match brand voice and audience expectations
+    7. SEO optimizations including meta description suggestion (150-160 characters)
+    8. Content formatted consistently in Markdown with proper use of formatting elements
+    9. Specific suggestions for any additional improvements noted in comments
+    The edited post should maintain the original meaning while significantly improving readability and impact.
   agent: editor
 
 
 review_task:
   description: >
-    Review the blog post for any errors or inconsistencies.
-    Ensure the post is aligned with the brand's voice and style.
-    Make sure the post is engaging and informative.
+    Review the edited blog post with a critical eye for quality and effectiveness.
+    Evaluate the content from the perspective of the target audience.
+    Assess SEO optimization and potential search performance.
+    Check factual accuracy and currency of information.
+    Analyze the blog post against top-performing content in this category.
+    Provide final recommendations for improvements before publication.
   expected_output: >
-    A well-written blog post in markdown format, ready for publication,each section should have 2 or 3 paragraphs.
-  agent: reviewer   
+    A comprehensive review report containing:
+    1. OVERALL ASSESSMENT: Rating (1-10) with brief justification
+    2. STRENGTHS: 3-5 specific strong points of the blog post
+    3. IMPROVEMENT AREAS: 3-5 specific suggestions with examples
+    4. SEO ANALYSIS: Assessment of keyword usage and optimization
+    5. AUDIENCE ALIGNMENT: How well the content meets target audience needs
+    6. COMPETITOR COMPARISON: How this content compares to similar articles
+    7. FACTUAL VERIFICATION: Confirmation of accuracy or corrections needed
+    8. FINAL RECOMMENDATIONS: Specific actionable advice for final polish
+    9. PUBLICATION READINESS: Clear statement if the post is ready to publish
+    10. FINAL REVISED BLOG POST: The complete corrected post in Markdown format
+    The review should be constructive, specific, and actionable.
+  agent: reviewer
