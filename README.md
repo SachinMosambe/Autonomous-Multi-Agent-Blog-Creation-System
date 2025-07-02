@@ -1,8 +1,4 @@
-It seems like you’ve uploaded a file, but I don’t need it for updating the `README.md`. Let's proceed to create a clean and understandable `README.md` file for your **BlogWriter Crew** project.
 
-Here is a more polished, simple, and easy-to-understand version of your `README.md` file:
-
----
 
 # BlogWriter Crew: AI-Powered Blog Generator
 
